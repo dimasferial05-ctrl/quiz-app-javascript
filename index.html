@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Quiz App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div id="start-screen" class="screen active">
+        <h1>Frontend Developer Quiz</h1>
+        <p>
+          Uji pengetahuanmu! Setiap pertanyaan memiliki batas waktu
+          <strong>60 detik</strong>. Jika waktu habis, poinmu akan dikurangi 1.
+        </p>
+        <button id="start-btn" class="btn-primary">Mulai Kuis</button>
+      </div>
+
+      <div id="quiz-screen" class="screen">
+        <div class="quiz-header">
+          <span id="question-tracker">Pertanyaan 1 / 5</span>
+          <span id="timer" class="timer">Waktu: 60s</span>
+        </div>
+
+        <h2 id="question-text">Teks Pertanyaan di sini?</h2>
+
+        <div id="options-container" class="options-grid"></div>
+
+        <div class="quiz-footer">
+          <button id="next-btn" class="btn-primary hide">Selanjutnya</button>
+        </div>
+      </div>
+
+      <div id="result-screen" class="screen">
+        <h1>Kuis Selesai!</h1>
+        <p>Skor Akhir Kamu:</p>
+        <h2 id="final-score" class="score-display">0</h2>
+        <div id="result-details" class="result-details"></div>
+        <button id="restart-btn" class="btn-primary">Coba Lagi</button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

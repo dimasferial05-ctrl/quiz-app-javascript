@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: #1e293b;
+}
+
+.container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  text-align: center;
+}
+
+/* Pengatur Layar Tampil/Sembunyi */
+.screen {
+  display: none;
+}
+.screen.active {
+  display: block;
+}
+.hide {
+  display: none !important;
+}
+
+/* Tipografi & Header */
+h1 {
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+p {
+  margin-bottom: 25px;
+  color: #64748b;
+  line-height: 1.6;
+}
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #475569;
+}
+.timer {
+  color: #ef4444;
+}
+
+/* Pertanyaan & Pilihan Jawaban */
+#question-text {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.option-btn {
+  padding: 15px 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+}
+.option-btn:hover:not(:disabled) {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* Status Jawaban (Ditambahkan oleh JS) */
+.option-btn.correct {
+  background-color: #22c55e;
+  color: white;
+  border-color: #22c55e;
+}
+.option-btn.wrong {
+  background-color: #ef4444;
+  color: white;
+  border-color: #ef4444;
+}
+.option-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Tombol Utama */
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+.score-display {
+  font-size: 3rem;
+  color: #2563eb;
+  margin: 20px 0;
+}
